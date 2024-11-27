@@ -50,20 +50,31 @@ Follow these steps to set up RBAC-UI on your local machine:
 
 #### **1. Clone the Repository**  
 ```bash  
-git clone https://github.com/SreeRaPAppUz/RBAC-UI.git  
+git clone https://github.com/SreeRaPAppUz/RBAC-UI.git
+```
+
+```bash
 cd RBAC-UI  
 ```  
 
 #### **2. Set Up a Virtual Environment**  
 ```bash  
-python -m venv venv  
-source venv/bin/activate  # On Windows: venv\scripts\activate
+python -m venv venv
+```
+
+```bash
+source venv/scripts/activate
 ```  
 
 #### **3. Install Dependencies**  
 ```bash  
-pip install -r requirements.txt  # on windows: pip install django
-```  
+pip install django 
+```
+
+```bash
+cd RBAC
+```
+
 
 #### **4. Configure the Database**  
 Update the database settings in `settings.py` to match your preferred configuration. The default setup uses PostgreSQL. Example configuration:  
@@ -82,20 +93,25 @@ DATABASES = {
 
 #### **5. Apply Migrations**  
 ```bash  
-python manage.py makemigrations  
+python manage.py makemigrations
+```
+
+```bash 
 python manage.py migrate  
 ```  
 
 #### **6. Create a Superuser**  
 ```bash  
 python manage.py createsuperuser  
-```  
+```
 
 #### **7. Start the Development Server**  
 ```bash  
 python manage.py runserver  
 ```  
-Visit the admin dashboard at:  
+
+
+To Visit the admin dashboard at:  
 ```
 http://127.0.0.1:8000/admin/  
 ```  
