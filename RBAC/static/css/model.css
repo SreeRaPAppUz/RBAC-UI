@@ -1,0 +1,92 @@
+/* Modal Background Overlay */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the overlay */
+}
+
+/* Modal Dialog Customization */
+.modal-dialog {
+    max-width: 500px; /* Set a fixed max width */
+    margin: 30px auto; /* Center the modal */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Modal Content */
+.modal-content {
+    border-radius: 10px; /* Add rounded corners to the modal content */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    overflow: hidden; /* Ensure no content overflows */
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #007bff; /* Set a custom header background color */
+    color: #fff; /* White text for contrast */
+    border-bottom: none; /* Remove default border */
+    padding: 15px;
+}
+
+/* Close Button */
+.modal-header .close {
+    color: #fff; /* White color for the close button */
+    opacity: 0.8; /* Slightly transparent */
+}
+.modal-header .close:hover {
+    color: #fff;
+    opacity: 1; /* Fully opaque on hover */
+}
+
+/* Modal Title */
+.modal-title {
+    font-size: 18px; /* Set a custom font size */
+    font-weight: bold; /* Make the title bold */
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 20px; /* Add padding inside the modal body */
+    font-size: 14px; /* Adjust the font size */
+    color: #333; /* Use a dark color for text */
+}
+
+/* Form Elements Inside Modal */
+.modal-body .form-group label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px;
+}
+.modal-body .form-group select {
+    color: #6c757d;
+    width: 100%; /* Full width dropdown */
+    padding: 10px; /* Add padding for better spacing */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 15px;
+    border-top: none; /* Remove default border */
+    justify-content: space-between; /* Space out buttons */
+}
+
+/* Buttons */
+.modal-footer .btn {
+    padding: 10px 20px; /* Larger buttons */
+    font-size: 14px; /* Slightly larger font size */
+    border-radius: 5px; /* Rounded corners */
+}
+.modal-footer .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}

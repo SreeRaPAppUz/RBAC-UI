@@ -1,0 +1,214 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>RBAC - Sign Up</title>
+  <!-- loader-->
+  <link href="{% static 'css/pace.min.css' %}" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="{% static 'css/icons.css' %}" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="{% static 'css/sidebar-menu.css' %}" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="{% static 'css/dashboard.css' %}" rel="stylesheet"/>
+  <link href="{% static 'css/sign.css' %}" rel="stylesheet" />
+  
+</head>
+
+<body class="bg-theme bg-theme1">
+ 
+<!-- Start wrapper-->
+ <div id="wrapper">
+ 
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+      <a href="/">
+       <h5 class="logo-text">RBAC - Dashboard</h5>
+      </a>
+   <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header">MAIN NAVIGATION</li>
+      <li>
+        <a href="/">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="Signin">
+          <i class="zmdi zmdi-lock"></i> <span>Login</span>
+        </a>
+      </li>
+      <li>
+        <a href="Signup">
+          <i class="zmdi zmdi-account-circle"></i> <span>Registration</span>
+        </a>
+      </li>
+
+    </ul>
+   
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav class="navbar navbar-expand fixed-top">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void();">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+  </ul>
+
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid"><br>
+
+  <!--Start Dashboard Content--> 
+  {% for message in messages %}
+    <div class="alert alert={{ message.tags }} alert-dismissible fade show" role="alert">
+        <p class="msg"><strong>Message : </strong>{{ message }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span class="x" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  {% endfor %}
+	<div class="row">
+     <div class="col-12 col-lg-8 col-xl-8">
+        
+	    <div class="card">
+		      <div class="card-body">
+            <h2 class="sign_heading">Sign up Here</h2>  
+            <form action="Signup" method="POST">  
+                {% csrf_token %}
+                <label for="username"><b>Username</b></label>  
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+    
+                <label for="email"><b>Email</b></label>  
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>  
+      
+                <label for="psw"><b>Password</b></label>  
+                <input type="password" id="psw" name="pass1" placeholder="Enter Password" required>  
+      
+                <label for="psw-repeat"><b>Repeat Password</b></label>  
+                <input type="password" id="psw-repeat" name="pass2" placeholder="Repeat Password" required>    
+      
+                <button type="submit">Sign up</button>
+            </form>	
+          </div>
+		  </div>
+	 </div>
+
+     <div class="col-12 col-lg-4 col-xl-4">
+        <div class="card">
+           <div class="card-body">
+              <h5>Already have an account</h5><br>
+              <a href="Signin"><button class="btn1">Sign in</button></a>
+           </div>
+         </div>
+     </div>
+	</div>
+  
+  <!--End Row-->
+
+  <!--End Dashboard Content-->
+	  
+	<!--start overlay-->
+		  <div class="overlay toggle-menu"></div>
+		<!--end overlay-->
+		
+    </div>
+    <!-- End container-fluid-->
+    
+    </div>
+    <!--End content-wrapper-->
+
+
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2024 SREERAG K B
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+	
+  <!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+		<li id="theme13"></li>
+        <li id="theme14"></li>
+        <li id="theme15"></li>
+      </ul>
+      
+     </div>
+   </div>
+  <!--end color switcher-->
+   
+  </div><!--End wrapper-->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	
+ <!-- simplebar js -->
+  <script src="{% static 'plugins/simplebar/js/simplebar.js' %}"></script>
+  <!-- sidebar-menu js -->
+  <script src="{% static 'js/sidebar-menu.js' %}"></script>
+  <!-- loader scripts -->
+  <script src="{% static 'js/jquery.loading-indicator.js' %}"></script>
+  <!-- Custom scripts -->
+  <script src="{% static 'js/app-script.js' %}"></script>
+ 
+  <!-- Index js -->
+  <script src="{% static 'js/index.js' %}"></script>
+
+  
+</body>
+</html>
