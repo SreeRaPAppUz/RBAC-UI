@@ -57,13 +57,12 @@ cd RBAC-UI
 #### **2. Set Up a Virtual Environment**  
 ```bash  
 python -m venv venv  
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install django
+source venv/bin/activate  # On Windows: venv\scripts\activate
 ```  
 
 #### **3. Install Dependencies**  
 ```bash  
-pip install -r requirements.txt  
+pip install -r requirements.txt  # on windows: pip install django
 ```  
 
 #### **4. Configure the Database**  
